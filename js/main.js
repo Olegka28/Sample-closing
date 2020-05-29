@@ -12,24 +12,23 @@
 // 2) Написать функцию createCounter, которая будет работать следующим образом.
 // let counter = createCounter(10);
 
+function makeAdder () {
+    let sum = 0;
 
-function makeAdder (num = 0) {
-    let sum = 0
-    function fn (sum) {
-        return sum + num
+    function fn (num) {
+        if (!num){
+            return sum = 0
+        }
+        return sum += num
     }
-    return fn(sum)
+    return fn
 }
 
-let adder = makeAdder;
+let adder = makeAdder();
 console.log("Первое задание")
 console.log(adder())
 console.log(adder(2))
 console.log(adder(10))
-
-let current;
-
-
 
 
 function createCounter (index) {
